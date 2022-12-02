@@ -31,6 +31,6 @@ export function Day(props: DayProps) {
       </div>
     );
   } else {
-    return <button onClick={() => setSolvable(true)}>SOLVE</button>;
+    return <button onClick={() => setSolvable(true)}>SOLVE {props.name}</button>;
   }
 }
