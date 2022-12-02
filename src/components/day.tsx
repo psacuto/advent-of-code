@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import * as days from "../services/days";
 
 interface DayProps {
   name: string;
+  implementation: (input: string) => string;
 }
 
 export function Day(props: DayProps) {
   const [dayInput, setDayInput] = useState("");
   const [result, setResult] = useState("");
-  const [solvable, setSolvable] = useState(false);
+  const [opened, setOpened] = useState(false);
 
   function execute(name: string) {
-    setResult((days as any)[name](dayInput));
+    setResult(props.implementation(dayInput));
   }
 
-  if (solvable) {
+  if (opened) {
     return (
       <div>
         <h2>{props.name}</h2>
@@ -23,14 +23,13 @@ export function Day(props: DayProps) {
           rows={21}
           onChange={(e) => setDayInput(e.currentTarget.value)}
         ></textarea>
-        <button onClick={() => execute(props.name)} disabled={!dayInput}>
-          {props.name}
-        </button>
+        <button onClick={() => execute(props.name)} disabled={!dayInput}>Execute</button>
 
         {result && <span>Result: {result}</span>}
+        <button onClick={() => setOpened(false)}>CLOSE</button>
       </div>
     );
   } else {
-    return <button onClick={() => setSolvable(true)}>SOLVE {props.name}</button>;
+    return <div><button onClick={() => setOpened(true)}>SOLVE {props.name}</button></div>;
   }
 }
