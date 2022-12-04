@@ -3,6 +3,7 @@ import { Day } from "./components/day";
 import { day1_1, day1_2 } from "./services/day1";
 import { day2_1, day2_2 } from "./services/day2";
 import { day3_1, day3_2 } from "./services/day3";
+import { day4_1, day4_2 } from "./services/day4";
 
 function App() {
 
@@ -16,6 +17,8 @@ function App() {
           <Day name="Day 2 - 2" implementation={day2_2} />
           <Day name="Day 3 - 1" implementation={day3_1} />
           <Day name="Day 3 - 2" implementation={day3_2} />
+          <Day name="Day 4 - 1" implementation={day4_1} />
+          <Day name="Day 4 - 2" implementation={day4_2} />
         </div>
       </header>
     </div>
