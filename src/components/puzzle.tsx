@@ -5,13 +5,17 @@ interface DayProps {
   implementation: (input: string) => string;
 }
 
-export function Day({ name, implementation }: DayProps) {
+export function Puzzle({ name, implementation }: DayProps) {
   const [dayInput, setDayInput] = useState("");
   const [result, setResult] = useState("");
   const [opened, setOpened] = useState(false);
 
-  function execute() {
-    setResult(implementation(dayInput));
+  function run() {
+    const timerName = "puzzle " + name;
+    console.time(timerName);
+    const result = implementation(dayInput);
+    console.timeEnd(timerName);
+    setResult(result);
   }
 
   if (opened) {
@@ -25,7 +29,7 @@ export function Day({ name, implementation }: DayProps) {
             onChange={(e) => setDayInput(e.currentTarget.value)}
           ></textarea>
         </div>
-        <button onClick={execute} disabled={!dayInput}>Execute</button>
+        <button onClick={run} disabled={!dayInput}>RUN</button>
 
         {result && <div>Result: {result}</div>}
         <button onClick={() => setOpened(false)}>CLOSE</button>
