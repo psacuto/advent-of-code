@@ -4,10 +4,12 @@ export function day6_1(input: string) {
     const markerSize = 4;
 
     const packetMarker = markerSize + arr.findIndex((_, index) => {
-        const packet = arr.slice(index, index + markerSize);
+        const packet = input.slice(index, index + markerSize);
+
         for (const char of packet) {
-            if (packet.reduce((acc, curr) => acc += curr === char ? 1 : 0, 0) > 1)
+            if (packet.split(char).length > 2) {
                 return false;
+            }
         }
         return true;
     });
@@ -21,10 +23,12 @@ export function day6_2(input: string) {
     const markerSize = 14;
 
     const messageMarker = markerSize + arr.findIndex((_, index) => {
-        const packet = arr.slice(index, index + markerSize);
+        const packet = input.slice(index, index + markerSize);
+
         for (const char of packet) {
-            if (packet.reduce((acc, curr) => acc += curr === char ? 1 : 0, 0) > 1)
+            if (packet.split(char).length > 2) {
                 return false;
+            }
         }
         return true;
     });
