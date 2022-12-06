@@ -5,6 +5,7 @@ import { day2_1, day2_2 } from "./services/day2";
 import { day3_1, day3_2 } from "./services/day3";
 import { day4_1, day4_2 } from "./services/day4";
 import { day5_1, day5_2 } from "./services/day5";
+import { day6_1, day6_2 } from "./services/day6";
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
           <Puzzle name="Day 4 - 2" implementation={day4_2} />
           <Puzzle name="Day 5 - 1" implementation={day5_1} />
           <Puzzle name="Day 5 - 2" implementation={day5_2} />
+          <Puzzle name="Day 6 - 1" implementation={day6_1} />
+          <Puzzle name="Day 6 - 2" implementation={day6_2} />
         </div>
       </header>
     </div>
