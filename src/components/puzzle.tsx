@@ -2,19 +2,17 @@ import React, { useState } from "react";
 
 interface DayProps {
   name: string;
-  implementation: (input: string) => string;
+  part1: (input: string) => string;
+  part2: (input: string) => string;
 }
 
-export function Puzzle({ name, implementation }: DayProps) {
+export function Puzzle({ name, part1, part2 }: DayProps) {
   const [dayInput, setDayInput] = useState("");
   const [result, setResult] = useState("");
   const [opened, setOpened] = useState(false);
 
-  function run() {
-    const timerName = "puzzle " + name;
-    console.time(timerName);
-    const result = implementation(dayInput);
-    console.timeEnd(timerName);
+  function run(program: (input: string) => string) {
+    const result = program(dayInput);
     setResult(result);
   }
 
@@ -29,10 +27,10 @@ export function Puzzle({ name, implementation }: DayProps) {
             onChange={(e) => setDayInput(e.currentTarget.value)}
           ></textarea>
         </div>
-        <button onClick={run} disabled={!dayInput}>RUN</button>
-
-        {result && <div>Result: {result}</div>}
+        <button onClick={() => run(part1)} disabled={!dayInput}>RUN PART 1</button>
+        <button onClick={() => run(part2)} disabled={!dayInput}>RUN PART 2</button>
         <button onClick={() => setOpened(false)}>CLOSE</button>
+        {result && <div>Result: {result}</div>}
       </div>
     );
   } else {

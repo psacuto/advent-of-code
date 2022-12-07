@@ -6,6 +6,7 @@ import { day3_1, day3_2 } from "./services/day3";
 import { day4_1, day4_2 } from "./services/day4";
 import { day5_1, day5_2 } from "./services/day5";
 import { day6_1, day6_2 } from "./services/day6";
+import { day7_1, day7_2 } from "./services/day7";
 
 function App() {
 
@@ -13,18 +14,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-          <Puzzle name="Day 1 - 1" implementation={day1_1} />
-          <Puzzle name="Day 1 - 2" implementation={day1_2} />
-          <Puzzle name="Day 2 - 1" implementation={day2_1} />
-          <Puzzle name="Day 2 - 2" implementation={day2_2} />
-          <Puzzle name="Day 3 - 1" implementation={day3_1} />
-          <Puzzle name="Day 3 - 2" implementation={day3_2} />
-          <Puzzle name="Day 4 - 1" implementation={day4_1} />
-          <Puzzle name="Day 4 - 2" implementation={day4_2} />
-          <Puzzle name="Day 5 - 1" implementation={day5_1} />
-          <Puzzle name="Day 5 - 2" implementation={day5_2} />
-          <Puzzle name="Day 6 - 1" implementation={day6_1} />
-          <Puzzle name="Day 6 - 2" implementation={day6_2} />
+          <Puzzle name="Day 1" part1={day1_1} part2={day1_2} />
+          <Puzzle name="Day 2" part1={day2_1} part2={day2_2} />
+          <Puzzle name="Day 3" part1={day3_1} part2={day3_2} />
+          <Puzzle name="Day 4" part1={day4_1} part2={day4_2} />
+          <Puzzle name="Day 5" part1={day5_1} part2={day5_2} />
+          <Puzzle name="Day 6" part1={day6_1} part2={day6_2} />
+          <Puzzle name="Day 7" part1={day7_1} part2={day7_2} />
         </div>
       </header>
     </div>
