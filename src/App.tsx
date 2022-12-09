@@ -7,6 +7,8 @@ import { day4_1, day4_2 } from "./services/day4";
 import { day5_1, day5_2 } from "./services/day5";
 import { day6_1, day6_2 } from "./services/day6";
 import { day7_1, day7_2 } from "./services/day7";
+import { day8_1, day8_2 } from "./services/day8";
+import { day9_1, day9_2 } from "./services/day9";
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
           <Puzzle name="Day 5" part1={day5_1} part2={day5_2} />
           <Puzzle name="Day 6" part1={day6_1} part2={day6_2} />
           <Puzzle name="Day 7" part1={day7_1} part2={day7_2} />
+          <Puzzle name="Day 8" part1={day8_1} part2={day8_2} />
+          <Puzzle name="Day 9" part1={day9_1} part2={day9_2} />
         </div>
       </header>
     </div>
