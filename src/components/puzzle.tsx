@@ -30,7 +30,7 @@ export function Puzzle({ name, part1, part2 }: DayProps) {
         <button onClick={() => run(part1)} disabled={!dayInput}>RUN PART 1</button>
         <button onClick={() => run(part2)} disabled={!dayInput}>RUN PART 2</button>
         <button onClick={() => setOpened(false)}>CLOSE</button>
-        {result && <div>Result: {result}</div>}
+        {result && <div>Result: <pre>{result}</pre></div>}
       </div>
     );
   } else {

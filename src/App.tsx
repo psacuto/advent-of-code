@@ -1,6 +1,7 @@
 import React from "react";
 import { Puzzle } from "./components/puzzle";
 import { day1_1, day1_2 } from "./services/day1";
+import { day10_1, day10_2 } from "./services/day10";
 import { day2_1, day2_2 } from "./services/day2";
 import { day3_1, day3_2 } from "./services/day3";
 import { day4_1, day4_2 } from "./services/day4";
@@ -25,6 +26,7 @@ function App() {
           <Puzzle name="Day 7" part1={day7_1} part2={day7_2} />
           <Puzzle name="Day 8" part1={day8_1} part2={day8_2} />
           <Puzzle name="Day 9" part1={day9_1} part2={day9_2} />
+          <Puzzle name="Day 10" part1={day10_1} part2={day10_2} />
         </div>
       </header>
     </div>

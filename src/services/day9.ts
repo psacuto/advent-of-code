@@ -1,6 +1,6 @@
 
-function normalized(prev: number[], current: number[]) {
-    return [Math.sign(prev[0] - current[0]), Math.sign(prev[1] - current[1])];
+function normalized(pos1: number[], pos2: number[]) {
+    return [Math.sign(pos1[0] - pos2[0]), Math.sign(pos1[1] - pos2[1])];
 }
 
 function distance(pos1: Array<number>, pos2: Array<number>) {
