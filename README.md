@@ -6,5 +6,5 @@ To run, execute the following commands in the console:
 
 ```
 npm install
-npm run
+npm start
 ```
