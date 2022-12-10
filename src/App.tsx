@@ -12,7 +12,6 @@ import { day8_1, day8_2 } from "./services/day8";
 import { day9_1, day9_2 } from "./services/day9";
 
 function App() {
-
   return (
     <div className="App">
       <header className="App-header">

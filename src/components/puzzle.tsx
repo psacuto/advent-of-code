@@ -27,13 +27,25 @@ export function Puzzle({ name, part1, part2 }: DayProps) {
             onChange={(e) => setDayInput(e.currentTarget.value)}
           ></textarea>
         </div>
-        <button onClick={() => run(part1)} disabled={!dayInput}>RUN PART 1</button>
-        <button onClick={() => run(part2)} disabled={!dayInput}>RUN PART 2</button>
+        <button onClick={() => run(part1)} disabled={!dayInput}>
+          RUN PART 1
+        </button>
+        <button onClick={() => run(part2)} disabled={!dayInput}>
+          RUN PART 2
+        </button>
         <button onClick={() => setOpened(false)}>CLOSE</button>
-        {result && <div>Result: <pre>{result}</pre></div>}
+        {result && (
+          <div>
+            Result: <pre>{result}</pre>
+          </div>
+        )}
       </div>
     );
   } else {
-    return <div><button onClick={() => setOpened(true)}>SOLVE {name}</button></div>;
+    return (
+      <div>
+        <button onClick={() => setOpened(true)}>SOLVE {name}</button>
+      </div>
+    );
   }
 }

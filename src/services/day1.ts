@@ -31,5 +31,9 @@ export function day1_2(input: string) {
     }
     currentElfCalories += calories;
   });
-  return groups.sort((a, b) => b - a).slice(0, 3).reduce((prev, current) => prev + current, 0).toString();
+  return groups
+    .sort((a, b) => b - a)
+    .slice(0, 3)
+    .reduce((prev, current) => prev + current, 0)
+    .toString();
 }
